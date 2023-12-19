@@ -1,38 +1,389 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 20px;
+  width: 97.5%;
+  background: #6B3CC9;
+  
+}
+
+nav {
+  flex: 3;
   text-align: center;
+  display: flex;
+  padding: 10px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  width: 95%;
+  
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.logo img {
+  width: auto;
+  height: 25px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+nav ul li {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  font-size: small;
+}
+.hero {
+  position: relative;
+  width: 100%;
+
+}
+.hero img {
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  top: 65%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  
+}
+.content {
+  background: linear-gradient(to right, rgba(81, 225, 90, 0.8), rgba(1, 28, 28, 0.2), rgba(14, 131, 170, 0));
+  padding: 20px;
+  background-color: #34cbea;
+  border-radius: 10px;
+  color: #fff;
+}
+
+
+@media (max-width: 900px) {
+  .overlay {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+  }
+
+  .content {
+      margin-top: -10px;
+      border-radius: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.paragraph {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.get-started-btn {
+  background-color: #f39c12; 
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.content-container {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.content-container img {
+  width: 95%;
+  max-width: 300px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.content-container h2 {
+  font-size: 24px;
+  color: #6B3CC9;
+  margin-bottom: 10px;
+}
+
+.content-container p {
+  font-size: 16px;
+  color: #555;
+}
+.content-container .learn-more {
+  background-color: #f39c12; 
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 129px;
+  height: 38px;
+}
+
+.content-container2 {
+  display: flex;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.content-container2 img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.content-container2 h2 {
+  font-size: 24px;
+  color: #6B3CC9;
+  margin-bottom: 10px;
+}
+
+.content-container2 p {
+  font-size: 16px;
+  color: #555;
+}
+.content-container2 .learn-more {
+  background-color: #f39c12; 
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 129px;
+  height: 38px;
+}
+
+footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
+  background-color: #6B3CC9;
+  color: #FFFFFF;
 }
 
-.App-link {
-  color: #61dafb;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo2, .technology, .services {
+  flex: 1;
+  margin: 0 10px;
 }
+
+h3 {
+  font-size: 18px;
+}
+
+ol, ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.line-divider {
+  width: 630px;
+  height: 1px;
+  background-color: #FFFFFF;
+  margin: 20px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.legal-links {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.divider {
+  width: 16px;
+  height: 0px;
+  border: 1px solid #FFFFFF;
+  transform: rotate(90deg);
+  margin: 0 10px;
+}
+
+/* Media query for smaller screens */
+@media screen and (min-width: 376px) and (max-width: 768px) {
+  .logo {
+      flex: 1;
+      display: flex;
+      align-items: center;
+  }
+  .logo img {
+      width: auto;
+      height: 28px;
+   
+  }
+  header {
+      width: 95%;
+  }
+  nav ul li {
+     
+      margin-top: 20px;
+ 
+     
+  }
+  nav ul li a {
+     
+      text-decoration: none;
+      color: #fff;
+      transition: background-color 0.3s;
+      font-size: small;
+      white-space: nowrap;
+  }
+
+  .logo2 {
+      flex: none;
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  .technology,
+.services {
+      display: inline-block;
+      width: 48%; 
+    
+      margin: 5px; 
+      padding: 10px; 
+    }
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-list li {
+  margin-right: 20px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.toggle-btn {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+/* screens below 375px */
+@media screen and (max-width: 375px) {
+  .logo img {
+      width: auto;
+      height: 25px;
+      margin-top:-60px;
+  }
+  .nav-list {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #6B3CC9;
+      z-index: 9999;
+  }
+
+  .nav-list.active {
+      display: flex;
+  }
+
+  .nav-list a {
+      display: block;
+      padding: 10px;
+      color: #fff;
+  }
+
+  .toggle-btn {
+      display: block;
+      color: #fff;
+      margin-left: 310px;
+
+  }
+
+  header {
+      width: 89%;
+  }
+
+  .row {
+      flex-direction: column;
+  }
+
+  .logo2,
+  .technology,
+  .services {
+      flex: 1; 
+      margin: 10px; 
+  }
+
+  .content-container,
+  .content-container2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+  }
+  .overlay {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+  }
+
+  .content {
+      margin-top: -10px;
+      border-radius: 0;
+  }
+
+}
+
+
+
